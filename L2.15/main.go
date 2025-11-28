@@ -52,7 +52,6 @@ var (
 	currentPgrp int = 0
 )
 
-
 // main — основной цикл командной строки shell
 func main() {
 
@@ -137,7 +136,6 @@ func main() {
 	}
 }
 
-
 // isSpace — проверка пробела
 func isSpace(b byte) bool {
 	return b == ' ' || b == '\t'
@@ -208,7 +206,6 @@ func tokenize(line string) ([]Token, error) {
 	}
 	return toks, nil
 }
-
 
 // parseSegments — делит токены на сегменты по && и ||
 func parseSegments(toks []Token) ([]*CmdSegment, error) {

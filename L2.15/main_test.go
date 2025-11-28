@@ -149,7 +149,6 @@ func TestBuiltinCd(t *testing.T) {
 	}
 }
 
-
 func TestRunSingleExternal(t *testing.T) {
 	unit := &CmdUnit{Args: []string{"echo", "OK"}}
 
@@ -164,7 +163,6 @@ func TestRunSingleExternal(t *testing.T) {
 		t.Fatalf("unexpected output: %q", out)
 	}
 }
-
 
 func TestPipelineBuiltins(t *testing.T) {
 	units := []*CmdUnit{
@@ -183,7 +181,6 @@ func TestPipelineBuiltins(t *testing.T) {
 		t.Fatalf("pipeline output invalid: %q", out)
 	}
 }
-
 
 func TestConditionalAnd(t *testing.T) {
 	toks, _ := tokenize("echo ok && echo success")
@@ -214,7 +211,6 @@ func TestConditionalOr(t *testing.T) {
 		t.Fatalf("OR operator failed: %q", out)
 	}
 }
-
 
 func TestRedirectOutput(t *testing.T) {
 	tmp := t.TempDir()
